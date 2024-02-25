@@ -6,4 +6,8 @@ defmodule NapkinDispenserWeb.PageController do
     # so skip the default app layout.
     render(conn, :home, layout: false)
   end
+
+  def show(conn, %{"id" => id}) do
+    render(conn, :show, layout: false, id: id)
+  end
 end
