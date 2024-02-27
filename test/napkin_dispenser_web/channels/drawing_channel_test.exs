@@ -6,6 +6,7 @@ defmodule NapkinDispenserWeb.DrawingChannelTest do
   setup do
     user_id = Utils.generate_id()
     napkin_id = Utils.generate_id()
+
     {:ok, _, socket} =
       NapkinDispenserWeb.UserSocket
       |> socket(user_id, %{})
