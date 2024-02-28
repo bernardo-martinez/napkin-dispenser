@@ -1,0 +1,33 @@
+name: Full Action
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Setup Elixir
+        uses: actions/setup-elixir@v1
+        with:
+          elixir-version: 1.16.1
+          otp-version: 26.2.1
+      - name: Install Dependencies
+        run: mix deps.get
+        env:
+          MIX_ENV: test
+      - name: Compile
+        run: mix compile
+        env:
+          MIX_ENV: test
+      - name: Run Tests
+        run: mix test
