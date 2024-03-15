@@ -3,9 +3,9 @@ defmodule NapkinDispenserWeb.PageControllerTest do
 
   alias Test.Support.Utils
 
-  test "GET /", %{conn: conn} do
+  test "GET / gets redirected to /{uuid}", %{conn: conn} do
     conn = get(conn, ~p"/")
-    assert html_response(conn, 200) =~ "napkin"
+    assert redirected_to(conn) =~ ~p"/"
   end
 
   test "GET /:id", %{conn: conn} do

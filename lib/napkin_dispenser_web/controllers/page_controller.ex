@@ -2,7 +2,7 @@ defmodule NapkinDispenserWeb.PageController do
   use NapkinDispenserWeb, :controller
 
   def home(conn, _params) do
-    render(conn, :home, layout: false)
+    redirect(conn, to: ~p"/#{Elixir.UUID.uuid4()}")
   end
 
   def show(conn, %{"id" => id}) do
