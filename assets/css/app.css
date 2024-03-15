@@ -77,7 +77,6 @@ body {
   background-color:#ddd;
 }
 #canvas{
-  width: 100%;
   cursor:crosshair ;
   background-color:#fff;
 }
