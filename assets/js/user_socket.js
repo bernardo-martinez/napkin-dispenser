@@ -1,4 +1,5 @@
 const newBtn = document.querySelector( '#new' );
+
 newBtn.addEventListener('click', newNapkin);
 
 function newNapkin() {
