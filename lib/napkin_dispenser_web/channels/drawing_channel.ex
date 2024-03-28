@@ -17,9 +17,9 @@ defmodule NapkinDispenserWeb.DrawingChannel do
 
   def handle_info(:after_join, socket) do
     {:ok, _} =
-    Presence.track(socket, socket.assigns.napkin_id, %{
-      online_at: inspect(System.system_time(:second))
-    })
+      Presence.track(socket, socket.assigns.napkin_id, %{
+        online_at: inspect(System.system_time(:second))
+      })
 
     push(socket, "presence_state", Presence.list(socket))
     {:noreply, socket}
