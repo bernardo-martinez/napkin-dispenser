@@ -78,7 +78,7 @@ const drawLine = event => {
           endX: newX,
           endY: newY,
           color: context.strokeStyle,
-          lineWidth: 2
+          lineWidth: context.lineWidth
       };
       x = newX;
       y = newY;
