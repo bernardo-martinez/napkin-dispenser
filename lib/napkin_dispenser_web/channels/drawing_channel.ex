@@ -1,4 +1,7 @@
 defmodule NapkinDispenserWeb.DrawingChannel do
+  @moduledoc """
+  Handles drawing events.
+  """
   use Phoenix.Channel, log_join: :info, log_handle_in: false
   alias NapkinDispenserWeb.Presence
 
