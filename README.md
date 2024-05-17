@@ -1,18 +1,12 @@
 # NapkinDispenser
 
-To start your Phoenix server:
+Pet project for creating ephemereal canvases that can be shared and viewed remotely.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+## Setup
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+For local execution run: `iex -S mix phx.server` and the navigate to `http://localhost:4000/` this will
+generate a canvas with a uuid in `http://localhost:4000/<uuid>`, this link can be shared and viewed live
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## To-Do:
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+- Transfer state when visiting a napkin that already has drawings on it
