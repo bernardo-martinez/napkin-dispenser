@@ -11,10 +11,6 @@ defmodule NapkinDispenser.Application do
       NapkinDispenserWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:napkin_dispenser, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: NapkinDispenser.PubSub},
-      # Start the Finch HTTP client for sending emails
-      {Finch, name: NapkinDispenser.Finch},
-      # Start a worker by calling: NapkinDispenser.Worker.start_link(arg)
-      # {NapkinDispenser.Worker, arg},
       # Start to serve requests, typically the last entry
       NapkinDispenserWeb.Endpoint,
       NapkinDispenserWeb.Presence
