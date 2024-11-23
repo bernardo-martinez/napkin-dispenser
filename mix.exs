@@ -56,7 +56,9 @@ defmodule NapkinDispenser.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
       {:elixir_uuid, "~> 1.2"},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      # renovatebot tests
+      {:bigtable, git: "https://github.com/bzzt/bigtable.git", tag: "v0.2.0"}
     ]
   end
 
